@@ -1,0 +1,32 @@
+<div class="app-login">
+  <div class="app-login-container">
+    <div fxLayout="row">
+        <div fxFlex.gt-sm="80%" >
+            <mat-card class="app-card">
+              <mat-card-header color="primary" class="app-card-header">
+                <div class="app-card-header-title">
+                  <h1>Login</h1>
+                  <p>Transporte Especial Alemar SAS</p>
+                </div>
+              </mat-card-header>
+                <mat-card-content class="app-card-content">
+                  <form class="example-form App-card-content-form">
+                    <mat-form-field class="example-full-width">
+                      <input matInput placeholder="Nombre usuario">
+                      <mat-icon matSuffix>account_circle</mat-icon>
+                    </mat-form-field>
+
+                    <mat-form-field class="example-full-width">
+                      <input matInput placeholder="contraseña" [type]="hide ? 'password' : 'text'">
+                      <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+                    </mat-form-field>
+                  </form>
+                  <div class="button-row">
+                    <button mat-raised-button color="primary">Login</button>
+                  </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+<mat-toolbar class="App-header" color="primary">
+
+  <mat-toolbar-row class="App-header-toolbar">
+    <span>
+      <img src="assets/logo-alemar.png" alt="alemar" height="30">
+    </span>
+    <span class="App-header-spacer"></span>
+    <button type="button" mat-button (click)="drawer.toggle()"> <mat-icon matSuffix>menu</mat-icon>Menu</button>
+    <span class="App-header-spacer-right"></span>
+    <button class="App-header-button-profile" mat-icon-button [matMenuTriggerFor]="menu">
+      <span>perfil</span>
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <mat-icon>dialpad</mat-icon>
+        <span>Editar</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>exit_to_app</mat-icon>
+        <span>Logout</span>
+      </button>
+    </mat-menu>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+
+
+<mat-drawer-container class="App-sidenav-container" autosize>
+  <mat-drawer #drawer class="App-sidenav-wrapper" mode="side">
+
+    <mat-nav-list appAccordion>
+        <mat-list-item appAccordionLink *ngFor="let sidebarmenu of sidebarmenus" routerLinkActive="selected" >
+            <a class="" [routerLink]="['/', sidebarmenu.state]" *ngIf="sidebarmenu.type === 'link'">
+                <mat-icon>{{ sidebarmenu.icon }}</mat-icon>
+                <span>{{ sidebarmenu.name }}</span>
+                <span fxFlex></span>
+            </a>
+        </mat-list-item>
+    </mat-nav-list>
+  </mat-drawer>
+  <mat-card class="App-content-wrapper">
+    <router-outlet></router-outlet>
+  </mat-card>
+</mat-drawer-container>

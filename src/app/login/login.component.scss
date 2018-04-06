@@ -1,0 +1,32 @@
+.app-login{
+  background: url('assets/logoalemar.png');
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+.example-full-width {
+  padding: 5px;
+  width: 100%;
+}
+
+.app-card-header-title h1{
+  margin: 0px;
+  padding: 0px;
+}
+.app-card-header-title p{
+  margin: 0px;
+  padding: 0px;
+}
+
+.app-card-content{
+  margin: 3em;
+}
