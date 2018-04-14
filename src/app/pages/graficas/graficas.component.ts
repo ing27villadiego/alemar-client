@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-graficas',
   templateUrl: './graficas.component.html',
-  styleUrls: ['./graficas.component.scss']
+  styles: []
 })
 export class GraficasComponent implements OnInit {
 

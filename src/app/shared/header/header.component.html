@@ -1,45 +1,119 @@
-<mat-toolbar class="App-header" color="primary">
+<header class="main-header">
+  <!-- Logo -->
+  <a href="index2.html" class="logo">
+    <!-- mini logo for sidebar mini 50x50 pixels -->
+    <span class="logo-mini"><img src="assets/images/visa.png" class="img-fluid" alt="logo" /></span>
+    <!-- logo for regular state and mobile devices -->
+    <span class="logo-lg">Alemar</span>
+  </a>
+  <!-- Header Navbar: style can be found in header.less -->
+  <nav class="navbar navbar-static-top top-navbar navbar-expand-md">
 
-  <mat-toolbar-row class="App-header-toolbar">
-    <span>
-      <img src="assets/logo-alemar.png" alt="alemar" height="30">
-    </span>
-    <span class="App-header-spacer"></span>
-    <button type="button" mat-button (click)="drawer.toggle()"> <mat-icon matSuffix>menu</mat-icon>Menu</button>
-    <span class="App-header-spacer-right"></span>
-    <button class="App-header-button-profile" mat-icon-button [matMenuTriggerFor]="menu">
-      <span>perfil</span>
-      <mat-icon>more_vert</mat-icon>
-    </button>
-    <mat-menu #menu="matMenu">
-      <button mat-menu-item>
-        <mat-icon>dialpad</mat-icon>
-        <span>Editar</span>
-      </button>
-      <button mat-menu-item>
-        <mat-icon>exit_to_app</mat-icon>
-        <span>Logout</span>
-      </button>
-    </mat-menu>
-  </mat-toolbar-row>
-</mat-toolbar>
+    <!-- Sidebar toggle button-->
+    <a href="#" class="sidebar-toggle d-block d-lg-none" data-toggle="push-menu" role="button">
+      <span class="sr-only">Toggle navigation</span>
+    </a>
 
+    <ul class="navbar-nav mr-auto mt-md-0">
 
+     </ul>
 
-<mat-drawer-container class="App-sidenav-container" autosize>
-  <mat-drawer #drawer class="App-sidenav-wrapper" mode="side">
+    <div class="navbar-custom-menu">
+      <ul class="nav navbar-nav">
+        <!-- User Account: style can be found in dropdown.less -->
+        <li class="dropdown user user-menu">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <img src="assets/images/user2-160x160.jpg" class="user-image rounded-circle" alt="User Image">
+            <span class="d-none d-sm-inline-block">Perfil</span>
+          </a>
+          <ul class="dropdown-menu scale-up">
+            <!-- User image -->
+            <li class="user-header">
+              <img src="assets/images/user2-280x90.jpg" class="img-fluid" alt="User Image">
 
-    <mat-nav-list appAccordion>
-        <mat-list-item appAccordionLink *ngFor="let sidebarmenu of sidebarmenus" routerLinkActive="selected" >
-            <a class="" [routerLink]="['/', sidebarmenu.state]" *ngIf="sidebarmenu.type === 'link'">
-                <mat-icon>{{ sidebarmenu.icon }}</mat-icon>
-                <span>{{ sidebarmenu.name }}</span>
-                <span fxFlex></span>
-            </a>
-        </mat-list-item>
-    </mat-nav-list>
-  </mat-drawer>
-  <mat-card class="App-content-wrapper">
-    <router-outlet></router-outlet>
-  </mat-card>
-</mat-drawer-container>
+              <p>
+                MultiPurpose Themes
+                <small>Member since April . 2016</small>
+              </p>
+            </li>
+            <!-- Menu Body -->
+            <li class="user-body">
+              <div class="row">
+                <div class="col text-center">
+                  <a href="#">Followers</a>
+                </div>
+                <div class="col text-center">
+                  <a href="#">Friends</a>
+                </div>
+                <div class="col text-center">
+                  <a href="#">Sales</a>
+                </div>
+              </div>
+              <!-- /.row -->
+            </li>
+            <!-- Menu Footer-->
+            <div class="user-footer">
+              <div class="pull-left">
+                <a href="#" class="btn btn-default btn-flat">Profile</a>
+              </div>
+              <div class="pull-right">
+                <a href="#" class="btn btn-default btn-flat">Sign out</a>
+              </div>
+            </div>
+          </ul>
+        </li>
+        <!-- Messages: style can be found in dropdown.less-->
+        <li class="dropdown messages-menu">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <i class="fa fa-envelope"></i>
+            <span class="label label-success">5</span>
+          </a>
+          <ul class="dropdown-menu scale-up">
+            <li class="header">You have 5 messages</li>
+            <li>
+              <!-- inner menu: contains the actual data -->
+              <ul class="menu inner-content-div">
+                <li><!-- start message -->
+                  <a href="#">
+                    <div class="pull-left">
+                      <img src="assets/images/user2-160x160.jpg" class="rounded-circle" alt="User Image">
+                    </div>
+                    <div class="mail-contnet">
+                       <h4>
+                        Lorem Ipsum
+                        <small><i class="fa fa-clock-o"></i> 15 mins</small>
+                       </h4>
+                       <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="footer"><a href="#">See all e-Mails</a></li>
+          </ul>
+        </li>
+        <!-- Notifications: style can be found in dropdown.less -->
+        <li class="dropdown notifications-menu">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <i class="fa fa-bell"></i>
+            <span class="label label-warning">7</span>
+          </a>
+          <ul class="dropdown-menu scale-up">
+            <li class="header">You have 7 notifications</li>
+            <li>
+              <!-- inner menu: contains the actual data -->
+              <ul class="menu inner-content-div">
+                <li>
+                  <a href="#">
+                    <i class="fa fa-users text-aqua"></i> Curabitur id eros quis nunc suscipit blandit.
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="footer"><a href="#">View all</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
