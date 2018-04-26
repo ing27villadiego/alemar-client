@@ -6,84 +6,32 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
 
-        <li class="treeview active">
-          <a href="#">
-            <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+        <li class="treeview">
+          <a [routerLink]="['/dashboard']">
+            <i class="material-icons">dashboard</i>
+            <span>Dashboard</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
         </li>
-        <li>
-          <a href="../layout/boxed.html">
-            <i class="fa fa-files-o"></i> layout Boxed</a>
-        </li>
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-archive"></i> <span>App</span>
+
+        <li class="treeview" *ngFor="let menu of menup">
+          <a>
+            <i class="material-icons">{{menu.icon}}</i>
+            <span>{{menu.title}}</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="../widgets/calendar.html"><i class="fa fa-circle-o"></i> Calendar</a></li>
-            <li class="treeview">
-              <a href="#"><i class="fa fa-circle-o"></i> Mailbox
-                <span class="pull-right-container">
-                  <i class="fa fa-angle-left pull-right"></i>
-                </span>
+            <li *ngFor="let submen of menu.submenu">
+              <a routerLinkActive="active" [routerLink]="[ submen.url ]">
+                <i [class]="submen.icon"></i> {{submen.title}}
               </a>
-              <ul class="treeview-menu">
-            	   <li><a href="../mailbox/read-mail.html"><i class="fa fa-circle-o"></i> Read</a></li>
-              </ul>
             </li>
-
           </ul>
         </li>
-        <li>
-          <a href="../widgets/widgets.html">
-            <i class="fa fa-th"></i> <span>Widgets</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-        </li>
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-laptop"></i>
-            <span>UI Elements</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="../UI/modals.html"><i class="fa fa-circle-o"></i> Modals</a></li>
-          </ul>
-        </li>
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-map"></i>
-            <span>Map</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="../map/map-vector.html"><i class="fa fa-circle-o"></i> Vector Map</a></li>
-          </ul>
-        </li>
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-edit"></i> <span>Forms</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="../forms/code-editor.html"><i class="fa fa-circle-o"></i> Code Editor</a></li>
-          </ul>
-        </li>
-
       </ul>
     </section>
 

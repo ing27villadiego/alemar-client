@@ -326,7 +326,10 @@ a:active, a:focus, a:hover {
 .main-header .logo .logo-mini {
     display: none;
 }
-
+.content-header {
+    position: relative;
+    padding: 17px 20px;
+}
 .content-header>h1, .content-header>.container>h1 {
     margin: 0 0 0px;
     font-size: 30px;
@@ -3089,7 +3092,7 @@ input[type="color"] {
     width: 90px;
     height: 90px;
 }
-/*-----------------*/
+/*-----------------*/	
 .box-comments {
     background: #f7f7f7;
 }
@@ -3893,7 +3896,7 @@ button.btn.dropdown-toggle::after, .wysihtml5-toolbar .btn.dropdown-toggle::afte
     margin-right: 0;
 }
 .nav-tabs-custom>.nav-tabs.float-right>li:first-of-type>a {
-    border-left-width: 1px;
+    border-left-width: 1px;	
 }
 .nav-tabs-custom>.nav-tabs.float-right>li:first-of-type>a.active {
     border-left-color: #f4f4f4;

@@ -1,0 +1,63 @@
+<!-- general form elements disabled -->
+  <div class="box box-warning">
+    <div class="box-header with-border">
+      <h3 class="box-title new-sub-tittle">Formulario para agregar usuarios</h3>
+    </div>
+    <!-- /.box-header -->
+    <div class="box-body">
+      <form [formGroup]="forma" (ngSubmit)="registerUser()" role="form">
+          <div class="row">
+            <div class="col-md-3 offset-md-2">
+              <div class="form-group">
+                <label>Nombre de usuario</label>
+                <input formControlName="username" name="username" required type="text" class="form-control" placeholder="nombre de usuario">
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <label>Correo Electronico</label>
+                <input formControlName="email" name="email" required type="text" class="form-control" placeholder="correo electronico">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3 offset-md-2">
+              <div class="form-group">
+                <label>Clave</label>
+                <input formControlName="password" placeholder="*******" name="password" required type="password" class="form-control">
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <label>Comfirmar clave</label>
+                <input formControlName="password" placeholder="*******" name="password" required type="password" class="form-control">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3 offset-md-2">
+              <label>Tipo de usuario</label>
+              <select class="form-control">
+                <option value="123hhhd">Administrador Root</option>
+                <option value="123hjhgvfd">Administrador</option>
+                <option value="idjd66dbdb">Estandar</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <label for="exampleInputFile">Imagen o fotografia</label>
+                <input formControlName="avatar" name="avatar" type="file" id="exampleInputFile">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-2 offset-md-2">
+              <button type="submit" class="btn btn-block btn-info btn-xs">Guardar</button>
+            </div>
+          </div>
+      </form>
+      <br/>
+    </div>
+    <!-- /.box-body -->
+  </div>
+  <!-- /.box -->
